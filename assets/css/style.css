@@ -18,15 +18,18 @@ body {
   padding: 0 16px;
 }
 
+.border {
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
 }
 
 .header img {
@@ -51,7 +54,7 @@ body {
   text-align: right;
 }
 
-.button {
+button {
   width: 200px;
   height: 48px;
   border: 2px solid #000;
@@ -60,4 +63,75 @@ body {
   font-size: 20px;
   box-shadow: 4px 4px #000;
   margin-top: 16px;
+  cursor: pointer;
+  transition: translate box-shadow color 0.25s;
+  text-transform: uppercase;
+}
+
+button:hover {
+  box-shadow: none;
+  color: #000;
+  translate: 10px 10px;
+  transition: all ease-in-out 0.2s;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0 12rem 0rem;
+}
+
+.section img {
+  width: 328px;
+}
+h1 {
+  padding: 1.6rem;
+  font-size: 40px;
+  font-weight: 900;
+}
+p {
+  padding: 1rem;
+  font-weight: 500;
+}
+span {
+  color: var(--color-dark);
+}
+.sectionCards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: -100px;
+  padding-bottom: 8rem;
+}
+.card {
+  width: 272px;
+  height: 306px;
+  background-color: var(--color-dark);
+  box-shadow: 4px 4px #000;
+  border: 2px solid #000;
+  padding: 2rem 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.card img:last-child {
+  align-self: flex-end;
+  flex: 1;
+  width: 64px;
+  height: 64px;
+  padding-top: 2rem;
+}
+
+.card p {
+  padding: 0;
+  font-weight: 500;
+}
+
+.card:nth-child(even) {
+  background-color: var(--color-light);
+  margin-left: 1rem;
 }
